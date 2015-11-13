@@ -19,7 +19,7 @@ h4,
 h1,
 h4
   font-family: $h1
-  letter-spacing: .2em
+  letter-spacing: .05em
 
 h2,
 h3
@@ -41,8 +41,11 @@ h3
 h4
   font-size: .7em
   font-weight: 300
-  padding-left: 20px
+  margin-left: 10px
+  margin-right: 10px
   margin-bottom: 15px
+  line-height: 1.6em
+  letter-spacing: .05em
 
 li
   display: inline-block
@@ -94,8 +97,7 @@ header
 
   #box
     background-color: $box-gray
-    min-width: 350px
-    min-height: 200px
+    min-width: 390px
     +span-columns(4 of 12)
     margin: 0 29px 29px 0px
     text-align: center
@@ -108,7 +110,6 @@ header
       border: 0
       margin: 0
       padding: 0
-      width: 100%
       background-size: contain
       overflow: hidden
       @include transition(all 0.4s ease-out)
@@ -140,12 +141,12 @@ header
   .fa-angle-up
     color: $black
     font-size: 3em
-    // padding-bottom: 4px
 
 footer
   +outer-container(1230px)
   padding: 30px
   border-top: solid $black 3px
+  display: block
 
   .footer-box
     +span-columns(2 of 12)
@@ -154,13 +155,63 @@ footer
     +span-columns(6 of 12)
 
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 1220px)
+
   header 
-    display: none
+    width: 100vw
+    height: 100px
+    left: 0 
+    padding: 0
+    position: fixed
+    top: 0
+    margin-left: 0
+    border: none
 
-    #box
-      +span-columns(12)
+    #logo
+      padding: 3px
+      margin-bottom: 0
 
+    li 
+      display: inline-block
+      text-decoration: none
+      border: none
+      padding: 0
+      margin: 0
+
+      h4
+        margin-left: 8px
+        padding: 0
+
+      &:hover
+        border-bottom: none
+        display: inline-block
+        text-decoration: none
+        font-weight: 500
+        border: none
+        padding: 0
+        margin: 0
+
+        h4
+          margin-left: 8px
+          padding: 0
+
+        &:hover
+          border-bottom: none
+
+@media only screen and (max-width: 400px)
+
+  header 
+    width: 100%
+    text-align: center
+    border-bottom: solid $black 3px
+
+    ol
+      margin-right: 325px
+
+  .footer-box,
+    +span-columns(12 of 12)
+    min-width: 400px
+    float: left
 
 
 

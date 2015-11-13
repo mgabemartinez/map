@@ -20,7 +20,7 @@ h4 {
 h1,
 h4 {
   font-family: "Work Sans", "Helvetica", sans-serif;
-  letter-spacing: 0.2em; }
+  letter-spacing: 0.05em; }
 
 h2,
 h3 {
@@ -42,8 +42,11 @@ h3 {
 h4 {
   font-size: 0.7em;
   font-weight: 300;
-  padding-left: 20px;
-  margin-bottom: 15px; }
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  line-height: 1.6em;
+  letter-spacing: 0.05em; }
 
 li {
   display: inline-block; }
@@ -109,8 +112,7 @@ header {
   #third-row #box,
   #fourth-row #box {
     background-color: #F0F0F0;
-    min-width: 350px;
-    min-height: 200px;
+    min-width: 390px;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -138,7 +140,6 @@ header {
       border: 0;
       margin: 0;
       padding: 0;
-      width: 100%;
       background-size: contain;
       overflow: hidden;
       -webkit-transition: all 0.4s ease-out;
@@ -181,7 +182,8 @@ footer {
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
-  border-top: solid #1A1A1A 3px; }
+  border-top: solid #1A1A1A 3px;
+  display: block; }
   footer::after {
     clear: both;
     content: "";
@@ -201,15 +203,57 @@ footer {
     footer .copyright:last-child {
       margin-right: 0; }
 
+@media only screen and (max-width: 1220px) {
+  header {
+    width: 100vw;
+    height: 100px;
+    left: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    margin-left: 0;
+    border: none; }
+    header #logo {
+      padding: 3px;
+      margin-bottom: 0; }
+    header li {
+      display: inline-block;
+      text-decoration: none;
+      border: none;
+      padding: 0;
+      margin: 0; }
+      header li h4 {
+        margin-left: 8px;
+        padding: 0; }
+      header li:hover {
+        border-bottom: none;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 500;
+        border: none;
+        padding: 0;
+        margin: 0; }
+        header li:hover h4 {
+          margin-left: 8px;
+          padding: 0; }
+        header li:hover:hover {
+          border-bottom: none; } }
 @media only screen and (max-width: 400px) {
   header {
-    display: none; }
-    header #box {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      header #box:last-child {
-        margin-right: 0; } }
+    width: 100%;
+    text-align: center;
+    border-bottom: solid #1A1A1A 3px; }
+    header ol {
+      margin-right: 325px; }
+
+  .footer-box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    min-width: 400px;
+    float: left; }
+    .footer-box:last-child {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=styles.css.map */
