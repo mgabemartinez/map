@@ -1,0 +1,27 @@
+$site-background: #FFFFFE
+$black: #1A1A1A
+$box-gray: #F0F0F0
+
+// fonts
+$h1: 'Work Sans', 'Helvetica', sans-serif
+$h2: 'Cardo', serif
+
+
+$tablet: new-breakpoint(max-width 768px 8)
+$mobile: new-breakpoint(max-width 480px 4)
+
+$phone-width: 480px
+$tablet-width: 768px
+$desktop-width: 1024px
+
+@mixin mobile
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) 
+    @content
+
+@mixin tablet 
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) 
+    @content
+
+@mixin desktop 
+  @media (min-width: #{$desktop-width}) 
+    @content
